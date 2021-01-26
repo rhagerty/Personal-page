@@ -10,6 +10,7 @@ body {
     rgba(9, 9, 121, 1) 60%,
     rgba(0, 212, 255, 1) 100%
   );
+  background-repeat: no-repeat;
 }
 
 .page-title {
