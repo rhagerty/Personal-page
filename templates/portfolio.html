@@ -1,0 +1,47 @@
+{% extends "home.html" %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md">
+        <div class="portfolio-container">
+            <div class="capstone-container"><a class="capstone-link" href="#">
+                    <img class="capstoneCollage" src="/images/mixologist-collage.jpg">
+                    <h1 class="capstone">Full Stack Web Application</h1>
+                    <h2 class="capstone-title">"Your Personal Mixologist"</h2>
+                    <p class="tech-stack">Tech Stack:</p>
+                    <ul class="framework-used">
+                        <li>Flask</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>CSS/HTML</li>
+                    </ul>
+                </a>
+            </div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="capstone-detail" style="display: none;">
+                        <div class="col-sm-3">
+                            <div>
+                                <a href="https://your-personal-mixologist.herokuapp.com/">
+                                    <img class="heroku-img responsive" src="/images/heroku.png">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://github.com/rhagerty/Capstone-Project">
+                                    <img class="github-img responsive" src="/images/github.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>Twitter Warbler</div>
+            <div>Memory Game</div>
+            <div>Boggle Game</div>
+            <div>Connect Four</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
