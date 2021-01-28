@@ -64,16 +64,20 @@ body {
   margin-left: 50%;
   margin-bottom: -10px;
 }
-
-.profile-pic {
+html{
+  background-image:url('/static/images/me.png');
   filter: opacity(0.6);
   position: absolute;
-  margin: auto;
+  z-index: -1;
+}
+/* .profile-pic {
+  
   right: 0;
   left: 0;
   width: 100%;
+  width: 100vw;
   z-index: -1;
-}
+} */
 
 @keyframes animate__shakeY {
   0% {
