@@ -70,6 +70,12 @@ html{
   position: absolute;
   z-index: -1;
 }
+
+@media only screen and (max-width: 320px) {
+  #image { 
+      background-image: url('/static/images/me.png'); 
+  }
+}
 /* .profile-pic {
   
   right: 0;
