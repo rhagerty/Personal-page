@@ -1,26 +1,68 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template, jsonify, session
+from boggle import Boggle
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "nevertell"
+
+boggle_game=Boggle()
 
 @app.route("/")
 def homepage():
     """Show landing page."""
 
-    return render_template("/templates/home.html")
-
-@app.route("/display-contact-info")
-def display_contact_info():
-    return render_template("/templates/contact-info.html")
-
-@app.route("/display-resume")
-def display_resume():
-    return render_template("/templates/resume.html")
-
-@app.route("/display-portfolio")
-def display_portfolio():
-    return render_template("/templates/portfolio.html")
+    return render_template("home.html")
 
 @app.route("/display-about")
 def display_about():
-    return render_template("/templates/aboutme.html")
+    return render_template("aboutme.html")
+
+@app.route("/display-portfolio")
+def display_portfolio():
+    return render_template("home.html", scrollToAnchor='portfolio')
+
+
+# Boggle Routes
+@app.route("/display-boggle")
+def display_boggle():
+    """Show board."""
+
+    board = boggle_game.make_board()
+    session['board'] = board
+    highscore = session.get("highscore", 0)
+    nplays = session.get("nplays", 0)
+
+    return render_template("boggle.html", board=board,
+                           highscore=highscore,
+                           nplays=nplays, scrollToAnchor='boggle')
+
+@app.route("/check-word")
+def check_word():
+    """Check if word is in dictionary."""
+
+    word = request.args["word"]
+    board = session["board"]
+    response = boggle_game.check_valid_word(board, word)
+
+    return jsonify({'result': response})
+
+
+@app.route("/post-score", methods=["POST"])
+def post_score():
+    """Receive score, update nplays, update high score if appropriate."""
+
+    score = request.json["score"]
+    highscore = session.get("highscore", 0)
+    nplays = session.get("nplays", 0)
+
+    session['nplays'] = nplays + 1
+    session['highscore'] = max(score, highscore)
+
+    return jsonify(brokeRecord=score > highscore)
+
+# Connect4 Routes
+
+@app.route("/display-connect")
+def display_connect():
+    """Show board."""
+
+    return render_template("connect4.html", scrollToAnchor='connect4')

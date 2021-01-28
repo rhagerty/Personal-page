@@ -1,0 +1,122 @@
+ 
+/* game board table */
+* {
+    margin: 0;
+    padding: 0;
+}
+ 
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 90px;
+    margin-bottom: 0;
+    color: white;
+}
+ 
+h2 {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 30px;
+}
+ 
+.connect4 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+ 
+#game {
+    text-align: center;
+    align-content: center;
+    overflow: hidden;
+    position: relative;
+}
+ 
+#board td {
+    width: 60px;
+    height: 60px;
+    border: none;
+    display: inline-block;
+    border-radius: 3%;
+    background: radial-gradient(
+        circle,
+        transparent,
+        transparent 20px,
+        #007fff 22px,
+        #007fff 25px,
+        #1f90ff 25px,
+        #1f90ff 38px,
+        #007fff 42px
+    );
+}
+ 
+button {
+    margin-top: 20px;
+    border: none;
+    border-radius: 10%;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    background: #2196f3 center;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+}
+ 
+/* pieces are div within game table cells: draw as colored circles */
+ 
+.piece {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: bounceInDown;
+    animation-duration: .7s;
+    z-index: -1;
+    position: absolute;
+}
+ 
+.piece.p1 {
+    background-color: red;
+    opacity: 90%;
+}
+ 
+.piece.p2 {
+    background-color: yellow;
+    opacity: 90%;
+}
+ 
+/* column-top is table row of clickable areas for each column */
+ 
+#column-top td {
+    border: none;
+    background: none;
+}
+ 
+#column-top td:hover {
+    border-radius: 50%;
+    background-color: lightgrey;
+    opacity: 50%;
+}
+ 
+#leftLeg {
+    float: left;
+    display: inline;
+    background-color: #1f90ff;
+    width: 10px;
+    height: 40px;
+}
+ 
+#rightLeg {
+    float: right;
+    display: inline;
+    background-color: #1f90ff;
+    width: 10px;
+    height: 40px;
+}
+ 
+ 

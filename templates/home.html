@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rebecca Hagerty</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/jquery"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,50 +19,114 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Delius+Unicase:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/boggle.css">
     {% endblock %}
 </head>
 
 <body>
+    <span class="image overlay">
+        <img class="profile-pic" src="/static/images/me.png">
+    </span>
     <div class="navBar">
-        <div class="navLink"><a href="/display-resume"><i class="fas fa-file"></i><span>Resume</span></a></div>
-        <div class="navLink"><a href="/display-portfolio"><i class="fas fa-folder"></i><span>Portfolio</span></a></div>
-        <div class="navLink"><a href="/display-contact-info"><i class="fas fa-phone-square"></i><span>Contact</span></a>
-        </div>
+        <div class="navLink"><a class="resume" href="#"><i class="fas fa-file"></i><span>Resume</span></a></div>
+        <div class="navLink"><a class="next-page" href="#"><i class="fas fa-folder"></i><span>Portfolio</span></a></div>
         <div class="navLink"><a href="/display-about"><i class="fas fa-info"></i><span>About</span></a></div>
+        <div class="navLink"><a class="email" href="mailto:rlhagerty@hotmail.com"><i
+                    class="fas fa-envelope"></i><span>Email</span></a></div>
+        <div class="navLink"><a href="https://www.linkedin.com/in/hagertyrebecca/"><img class="linkedin responsive"
+                    src="/static/images/linkedin.png"><span>Linkedin</span></a></div>
         <div class="navLink"><a href="https://github.com/rhagerty/"><img class="fas github responsive"
-                    src="/images/github.png"><span>Github</span></a></div>
+                    src="/static/images/github.png"><span>Github</span></a></div>
     </div>
-    
     <div class="container">
-        {% block content%}
         <div class="row">
-            <div class="col-md-6">
-                <img class="profile-pic responsive" src="/images/me.png">
+            <div class="col-lg page-title main">
+                <h2>Hey, I'm</h2>
+                <h1 class="gradient-text">Rebecca Hagerty</h1>
             </div>
-            <div class="col-md-6 page-title">
-                <h1>Rebecca Hagerty</h1>
-                <h4>computer nerd</h4>
-                <h4>web development specialist</h4>
-                <p> JavaScript, CSS, HTML, Flask, Python, SQL, Git, Express, NodeJS, PostgreSQL</p>
+            <div class="col-sm-4 page-title first">
+                <h3>I'm a:</h3>
+                <h4>computer nerd and web development specialist</h4>
+            </div>
+            <div class="col-sm-4 page-title second">
+                <h3>My hobbies include:</h3>
+                <h4> JavaScript, CSS, HTML, Flask, Python, SQL, Git, Express, NodeJS, PostgreSQL</h4>
+            </div>
+            <div class="col-sm-4 page-title next">
+                <h3>What I've done so far:</h3>
+                <h1 class="animate__animated animate__shakeY animate_slower">
+                    <a class="next-page" href="#"><i class="fas fa-arrow-down"></i></a>
+                </h1>
             </div>
         </div>
+
+        {% block content%}
+        <div class="row portfolio">
+            <div class="col-sm-2 sidebar">
+
+                <div class="sideLink"><a href="/display-boggle"><img class="boggle-img"
+                            src="/static/images/boggle.png"><span class="boggle-link">BOGGLE</span></a></div>
+                <div class="sideLink"><a href="/display-connect"><img class="connect-img"
+                            src="/static/images/connect.png"><span class="connect-4-link">CONNECT4</span></a></div>
+                <div class="sideLink"><a href="#"><img class="jeopardy-img" src="/static/images/jeo.jpg"><span
+                            class="jeopardy-link">JEOPARDY</span></a></div>
+                <div class="sideLink"><a class="backToTop" href="#"><i class="fas fa-arrow-up"></i><span
+                            class="top-link">TOP</span></a></div>
+
+            </div>
+            <div class="col-md-8 resume-container" style="display: none;">
+                <iframe src="https://resume.creddle.io/embed/74s5v3886t8" width="850" height="1100" seamless></iframe>
+            </div>
+            {% if scrollToAnchor %}
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.location.hash = '#{{ scrollToAnchor }}';
+                });
+            </script>
+            {% endif %}
+            <a id="portfolio">
+            <div class="col-md-8 portfolio-box">
+                <div class="capstone">
+                    <img src="/static/images/main-page.png" class="mixologist-img">
+                    <div class="thumb-imgs">
+                        <a href="https://your-personal-mixologist.herokuapp.com/">
+                            <img class="heroku-img responsive" src="/static/images/heroku.png">
+                        </a>
+                        <a href="https://github.com/rhagerty/Capstone-Project">
+                            <img class="github-img responsive" src="/static/images/github.png">
+                        </a>
+                    </div>
+                    <div class="text-box">
+                        <p><b>Full Stack Web App: "Your Personal Mixologist"</b></p>
+                        <p><b>LANGUAGES:</b> Python, JavaScript, SQL, CSS/HTML</p>
+                        <p><b>LIBRARIES AND FRAMEWORKS:</b> Flask, JQuery, Unittest, Bootstrap</p>
+                        <p><b>TOOLS:</b> Git, PostgreSQL, Axios, Flask-WTForms, Flask-SQLAlchemy, Jinja, VSCode, Heroku
+                        </p>
+                    </div>
+
+                </div>
+                <div class="twitter-clone"></div>
+            </div>
+
+
+
+
+        </div>
+        
         {% endblock %}
 
+
+
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="/app.js"></script>
+    <script src="/static/app.js"></script>
 </body>
 
 </html>

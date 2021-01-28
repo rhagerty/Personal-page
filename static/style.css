@@ -1,0 +1,367 @@
+.navBar {
+  text-align: center;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(13, 10, 71) 0%,
+    rgb(24, 24, 158) 40%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  position: relative;
+}
+
+.page-title.main {
+  color: white;
+  position: relative;
+  margin-top: 5em;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: left;
+}
+
+.page-title > h2 {
+  padding: 0;
+  font-style: italic;
+}
+
+.page-title > h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 5em;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 2em;
+  margin-left: 1em;
+}
+
+.page-title {
+  color: white;
+}
+
+.page-title > h3 {
+  font-style: italic;
+  text-align: left;
+  margin-top: 5em;
+}
+
+.first,
+.second,
+.next {
+  vertical-align: bottom;
+}
+
+.page-title > h4 {
+  text-align: justify;
+  font-weight: bold;
+}
+
+.fa-arrow-down {
+  color: white;
+  font-size: 5rem;
+  margin-left: 50%;
+  margin-bottom: -10px;
+}
+
+.profile-pic {
+  filter: opacity(0.6);
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+@keyframes animate__shakeY {
+  0% {
+    transform: translateY(0deg);
+  }
+  20% {
+    transform: translateY(180deg);
+  }
+  100% {
+    transform: translateY(180deg);
+  }
+}
+
+.animate__shakeY {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+span {
+  display: block;
+  padding: 1.5rem;
+}
+
+.navLink {
+  display: inline-block;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.fa-file,
+.fa-info,
+.fa-folder,
+.github,
+.fa-envelope,
+.linkedin {
+  display: block;
+  font-size: 3.5rem;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  color:rgba(255, 255, 255, 0.8);
+  transition: 0.5s;
+}
+
+.fas.github{
+  height: 3.5rem;
+  filter: invert(1);
+}
+
+.linkedin {
+  height: 3.5rem;
+  filter: grayscale(100%);
+  filter: brightness(0) invert(1) opacity(0.8);
+}
+
+.linkedin:hover{
+  filter: grayscale(0) opacity(0.6);
+}
+.fas:hover {
+  color: #2074e2;
+}
+
+.fa-info:hover {
+  color: #448be9;
+}
+.fas.github:hover {
+  filter: invert(25%);
+}
+
+.fa-folder:hover {
+  color: #4294e0;
+}
+
+.fa-file:hover {
+  color: #73ace0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+  padding: 1rem;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+}
+
+/* portfolio scroll box */
+
+.portfolio{
+  margin-top: 5em;
+}
+
+.portfolio-box {
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(68, 115, 177, 0.7);
+  padding: 2rem;
+  font-family: "Roboto Mono", monospace;
+  overflow: scroll;
+  z-index: 1;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-top: 3rem;
+}
+
+.mixologist-img {
+  height: 12em;
+  vertical-align: top;
+  border-radius: 5px;
+}
+
+.text-box {
+  display: inline-block;
+  color: white;
+  text-align: left;
+  overflow-wrap: break-word;
+  margin-top: 1rem;
+}
+
+.thumb-imgs {
+  float: right;
+  vertical-align: top;
+}
+
+.heroku-img,
+.github-img {
+  height: 4em;
+  display: block;
+}
+
+/* sidebar */
+.sideLink {
+  margin: auto;
+  right: 0;
+  left: 0;
+  color: white;
+}
+
+.fa-arrow-up,
+.boggle-img,
+.connect-img,
+.jeopardy-img, .fa-folder.sidelink {
+  display: block;
+  font-size: 5rem;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  color: white;
+  transition: 0.5s;
+}
+
+.boggle-link, .connect-4-link,
+.jeopardy-link, .top-link, .side-portfolio{
+  display: block;
+  margin-top: 2rem;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 3rem;
+}
+
+.jeopardy-img{
+  height: 6rem;
+}
+
+.boggle-img,
+.connect-img{
+  height: 6rem;
+  filter: invert(1);
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid #70a4e7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #70a4e7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #70a4e7;
+}
+
+.resume-container{
+  margin-top: 2rem;
+}
+
+/* About me section styling */
+
+.about-container {
+  color: white;
+  position: absolute;
+  width: 70%;
+  text-align: center;
+}
+
+.about-me {
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: justify;
+  display: flex;
+}
+
+.about-container > h3 {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.about-me-pic {
+  border-radius: 10px;
+}
+
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: white;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(
+    45deg,
+    white 16.666%,
+    white 16.666%,
+    #70aae0 33.333%,
+    #70aae0 33.333%,
+    #428ae7 50%,
+    #428ae7 50%,
+    #277ae7 66.666%,
+    #277ae7 66.666%,
+    #2074e2 83.333%,
+    #2074e2 83.333%
+  );
+
+  /* Set the background size and repeat properties. */
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-simple-animation-rev 5s ease-in forwards;
+}
+
+.gradient-text:hover {
+  animation: rainbow-text-simple-animation 4s ease-in forwards;
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+  40% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+  60% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 650%;
+  }
+}

@@ -1,0 +1,71 @@
+{% extends "home.html" %}
+
+
+{% block content %}
+<div class="row boggle-container">
+  <div class="col-sm-3 sidebar">
+
+    <div class="sideLink"><a class="next-page" href="/display-portfolio"><i class="fas fa-folder sidelink"></i><span
+          class="side-portfolio">Portfolio</span></a></div>
+    <div class="sideLink"><a href="/display-connect"><img class="connect-img" src="/static/images/connect.png"><span
+          class="connect-4-link">CONNECT4</span></a></div>
+    <div class="sideLink"><a href="#"><img class="jeopardy-img" src="/static/images/jeo.jpg"><span
+          class="jeopardy-link">JEOPARDY</span></a></div>
+    <div class="sideLink"><a class="backToTop" href="#"><i class="fas fa-arrow-up"></i><span
+          class="top-link">TOP</span></a></div>
+
+  </div>
+  {% if scrollToAnchor %}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.location.hash = '#{{ scrollToAnchor }}';
+    });
+  </script>
+  {% endif %}
+  
+    <div class="col-md" id="boggle">
+
+      <table class="board">
+        <tbody>
+          {% for row in board %}
+          <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <p>High Score:
+        <b>{{ highscore }}</b>
+        in {{ nplays }} plays
+      </p>
+
+      <p>
+        Score: <b class="score">0</b>
+        Seconds Left: <b class="timer"></b>
+      </p>
+
+      <form method="POST" class="add-word">
+        <input name="word" class="word" autofocus>
+        <button>Try Word</button>
+      </form>
+
+      <p class="msg">
+        <!-- our JS will put messages here dynamically -->
+      </p>
+
+      <ul class="words">
+        <!-- our JS will words here as they score -->
+      </ul>
+
+    </div>
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+    <script src="/static/boggle.js"></script>
+    <script>
+      let game = new BoggleGame("boggle", 120);
+    </script>
+</div>
+{% endblock %}
