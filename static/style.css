@@ -76,14 +76,14 @@ html{
       background-image: url('/static/images/me.png'); 
   }
 }
-/* .profile-pic {
-  
+.profile-pic {
+  position: absolute;
   right: 0;
   left: 0;
   width: 100%;
   width: 100vw;
   z-index: -1;
-} */
+}
 
 @keyframes animate__shakeY {
   0% {
