@@ -155,13 +155,14 @@ body{
 }
 
 .definition {
+  animation: 2.5s ease-in 3.5s 1 fadeIn;
   color: rgb(116, 116, 116);
   margin: -1.5vw auto;
 
   }
 
 .likes {
-
+  animation: 2.5s ease-in 6.5s 1 fadeIn;
   color:rgb(116, 116, 116);
   padding: 1rem;
   word-wrap: break-word;
@@ -172,6 +173,7 @@ body{
 }
 
 .folder {
+  animation: 1s ease-in 8s 1 flipInX;
   color: rgb(116, 116, 116);
   padding: 1rem;
   margin: 4vw auto;

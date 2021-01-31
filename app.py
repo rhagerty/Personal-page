@@ -9,8 +9,11 @@ boggle_game=Boggle()
 @app.route("/")
 def homepage():
     """Show landing page."""
-
-    return render_template("home.html")
+    if 'username' in session:
+        return render_template("home.html")
+    else:
+        session['username']= 'user'
+        return render_template('landingpage.html')
 
 @app.route("/display-about")
 def display_about():
