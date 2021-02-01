@@ -169,8 +169,8 @@ body {
   padding: 1rem;
   margin: 4vw auto;
   left: 0;
-  right: 0;
-  text-align: center;
+  right: 2rem;
+  text-align: right;
 }
 .fa-file-export {
   color: #2d95f0;
