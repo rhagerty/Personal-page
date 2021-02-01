@@ -1,17 +1,15 @@
 {% extends "home.html" %}
 
+{% block head %}
+{{ super() }}
+<link href="/static/boggle.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
 <div class="row boggle-container">
   <div class="col-sm-3 sidebar">
-
-    <div class="sideLink"><a class="next-page" href="/display-portfolio"><i class="fas fa-folder sidelink"></i><span
-          class="side-portfolio">Portfolio</span></a></div>
-    <div class="sideLink"><a href="/display-connect"><img class="connect-img" src="/static/images/connect.png"><span
-          class="connect-4-link">CONNECT4</span></a></div>
-    <div class="sideLink"><a href="#"><img class="jeopardy-img" src="/static/images/jeo.jpg"><span
-          class="jeopardy-link">JEOPARDY</span></a></div>
-    <div class="sideLink"><a class="backToTop" href="#"><i class="fas fa-arrow-up"></i><span
+    <div class="sideLink"><a class="backToTop" href="/main"><i class="fas fa-arrow-up"></i><span
           class="top-link">TOP</span></a></div>
 
   </div>
@@ -23,8 +21,9 @@
   </script>
   {% endif %}
   
-    <div class="col-md" id="boggle">
-
+    <div class="col-md-8 boggle">
+      <a id="boggle"></a>
+<h1>Boggle</h1>
       <table class="board">
         <tbody>
           {% for row in board %}

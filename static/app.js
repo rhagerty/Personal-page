@@ -6,21 +6,25 @@ $(document).ready(function () {
   }, 500);
   setTimeout(function () {
     $(".definition").css("visibility", "visible");
-  }, 3500);
+  }, 3000);
   setTimeout(function () {
     $(".likes").css("visibility", "visible");
-  }, 6500);
+  }, 4500);
   setTimeout(function () {
     $(".folder").css("visibility", "visible");
-  }, 8000);
+  }, 4500);
 });
 
 $(".next-page").click(function () {
+  $(".jeopardy-container").hide();
+  $(".connect4-container").hide();
+  $(".boggle-container").hide();
   $(".portfolio-box").show();
   $(".sidebar").show();
+  $(".resume-container").hide();
   $("html, body").animate(
     {
-      scrollTop: parseInt($(".sidebar").offset().top),
+      scrollTop: parseInt($(".portfolio-box").offset().top),
     },
     2000
   );
@@ -29,6 +33,7 @@ $(".next-page").click(function () {
 $(".resume").click(function () {
   $(".portfolio-box").hide();
   $(".resume-container").show();
+  $(".sidebar").show();
   $("html, body").animate(
     {
       scrollTop: parseInt($(".resume-container").offset().top),
@@ -49,5 +54,23 @@ $(".backToTop").click(function () {
       scrollTop: "0px",
     },
     1000
+  );
+  $(".resume-container").hide();
+  $(".portfolio-box").hide();
+  $(".jeopardy-container").hide();
+  $(".connect4-container").hide();
+  $(".boggle-container").hide();
+});
+
+$(".about").click(function () {
+  $(".portfolio-box").hide();
+  $(".resume-container").hide();
+  $(".sidebar").show();
+  $(".about-container").show();
+  $("html, body").animate(
+    {
+      scrollTop: parseInt($(".about-container").offset().top),
+    },
+    2000
   );
 });

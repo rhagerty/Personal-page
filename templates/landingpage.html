@@ -40,11 +40,11 @@
 
         <div class="row" id="navbar-row">
             <div class="col-12 navBar">
-                <div class="navLink"><a class="resume" href="#"><i class="fas fa-file"></i><span>Resume</span></a>
+                <div class="navLink"><a class="resume" href="/"><i class="fas fa-file"></i><span>Resume</span></a>
                 </div>
-                <div class="navLink"><a class="next-page" href="#"><i
+                <div class="navLink"><a class="next-page" href="/"><i
                             class="fas fa-folder"></i><span>Portfolio</span></a></div>
-                <div class="navLink"><a href="/display-about"><i class="fas fa-info"></i><span>About</span></a>
+                <div class="navLink"><a class="about" href="/"><i class="fas fa-info"></i><span>About</span></a>
                 </div>
                 <div class="navLink"><a class="email" href="mailto:rlhagerty@hotmail.com"><i
                             class="fas fa-envelope"></i><span>Email</span></a></div>
@@ -73,7 +73,7 @@
                     <h5>1. JavaScript, CSS, HTML, Flask, Python, SQL, Git, Express, NodeJS, PostgreSQL</h5>
                     <h5>2. Making objects in my hand disappear into another dimension.</h5>
                 </div>
-                
+
                 <div class="col-md-4 dislikes" style="visibility: hidden;">
                     <h4>Dislikes:</h4>
                     <h5>1. Cannot read property 'dislikes' of undefined.</h5>
@@ -85,60 +85,154 @@
                 </div>
             </div>
 
-
-            <div class="row portfolio">
+            
+            <div class="row">
                 <div class="col-md-2 sidebar" style="display: none;">
-
-                    <div class="sideLink"><a href="/display-boggle"><img class="boggle-img"
-                                src="/static/images/boggle.png"><span class="boggle-link">BOGGLE</span></a></div>
-                    <div class="sideLink"><a href="/display-connect"><img class="connect-img"
-                                src="/static/images/connect.png"><span class="connect-4-link">CONNECT4</span></a></div>
-                    <div class="sideLink"><a href="#"><img class="jeopardy-img" src="/static/images/jeo.jpg"><span
-                                class="jeopardy-link">JEOPARDY</span></a></div>
                     <div class="sideLink"><a class="backToTop" href="#"><i class="fas fa-arrow-up"></i><span
                                 class="top-link">TOP</span></a></div>
-
                 </div>
-                <div class="col-md-10 resume-container" style="display: none;">
-                    <iframe src="https://resume.creddle.io/embed/74s5v3886t8" width="850" height="1100"
-                        seamless></iframe>
-                </div>
-
-                <div class="col-sm-12 col-md-8 portfolio-box" style="display: none;">
-                    <div class="capstone">
-                        <img src="/static/images/main-page.png" class="mixologist-img">
-                        <div class="thumb-imgs">
-                            <a href="https://your-personal-mixologist.herokuapp.com/">
-                                <img class="heroku-img responsive" src="/static/images/heroku.png">
-                            </a>
-                            <a href="https://github.com/rhagerty/Capstone-Project">
-                                <img class="github-img responsive" src="/static/images/github.png">
-                            </a>
-                        </div>
-                        <div class="text-box">
-                            <p><b>Full Stack Web App: "Your Personal Mixologist"</b></p>
-                            <p><b>LANGUAGES:</b> Python, JavaScript, SQL, CSS/HTML</p>
-                            <p><b>LIBRARIES AND FRAMEWORKS:</b> Flask, JQuery, Unittest, Bootstrap</p>
-                            <p><b>TOOLS:</b> Git, PostgreSQL, Axios, Flask-WTForms, Flask-SQLAlchemy, Jinja, VSCode,
-                                Heroku
-                            </p>
-                        </div>
-
+                <div class="col-md-9 about-container" style="display: none;">
+                    <p>
+                        My early career has been in automotive MfgE until
+                        2019 when I left automotive in pursuit of a more fulfilling career path. I hadn’t
+                        found my previous positions challenging and was lacking the passion to return to
+                        engineering. I
+                        spent a few months traveling and then began working as a
+                        personal trainer <sub>Exhibit 1</sub> while I pondered my next transition. </p>
+                    <div class="col training-img">
+                        <img class="training" src="/static/images/training.png">
+                        </img>
+                        <small class="exhibit">Exhibit 1</small>
                     </div>
-                    <div class="twitter-clone"></div>
+                    <p>
+                        Quarantine brought a swift end to my personal training career, but helped me rediscover
+                        the
+                        extent of my engineering “brain” as I found myself passing
+                        time building household solutions. E.g. I couldn't find a spice cart to fit beside my stove
+                        and decided to build <sub>Exhibit 1</sub> my own. I crave complex mental
+                        stimulation and began researching career paths that would satisfy this need for
+                        mental engagement and variety.
+                    </p>
+                    <div class="col video-container">
+                        <video class="video" width="320" height="240" controls autoplay>
+                            <source src="/static/images/video.mp4" type=video/mp4>
+                        </video>
+                        <small class="exhibit">Exhibit 2</small>
+                    </div>
+                    <p>My fascination with technology, computers, and coding began before I can remember. As a
+                        preteen I
+                        dabbled with html styling for my social media pages (anyone remember LiveJournal or
+                        Myspace??)
+                        and was an avid video gamer. It didn't take long before I discovered
+                        the
+                        kismet connection between my technical brain and computer savvy, and made the decision to
+                        transition to software engineering. </p>
+
+                    <p>
+                        <b>Enter: Springboard's Software Engineering Bootcamp </b>
+                    </p>
+                    <p>I dove head first
+                        into the curriculum and was engrossed with the continuous challenges and daily “puzzles” I
+                        was
+                        solving using the type of logic that I enjoy (math?! algorithms?! Oh yes!). I’m
+                        reinvigorated with passion for this
+                        newfound career choice, and in my current job search I’m focusing on companies with a strong
+                        culture
+                        where my passion can be collaborated with other incredibly passionate individuals.
+                        Essentially,
+                        I’m looking to make an impact and accept a challenge!</p>
+
+                    <h3>TLDR- Former Mfg Engineer turned computer programmer</h3>
                 </div>
 
+                <div class="col-md-10 resume-container" style="display: none;">
+                    <iframe src="https://resume.creddle.io/embed/74s5v3886t8" width="850" height="1100" seamless></iframe>
+                </div>
+                <div class="col-sm-10 col-md-8 portfolio-box" style="display: none;">
+                    <div class="row portfolio">
+                        <div class="col-sm-12 col-md-6 capstone">
+                            <a href="https://your-personal-mixologist.herokuapp.com/">
+                                <img src="/static/images/main-page.png" class="main-img"></a>
 
+                            <div class="text-box">
+                                <p>Full Stack Web App: "Your Personal Mixologist"</p>
+                                <p>LANGUAGES: Python, JavaScript, SQL, CSS/HTML</p>
+                                <p>LIBRARIES AND FRAMEWORKS: Flask, JQuery, Unittest, Bootstrap</p>
+                                <p>TOOLS: Git, PostgreSQL, Axios, Flask-WTForms, Flask-SQLAlchemy, Jinja, VSCode,
+                                    Heroku
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 thumb-imgs">
+                                    <a href="https://your-personal-mixologist.herokuapp.com/">
+                                        <img class="heroku-img responsive" src="/static/images/heroku.png">
+                                    </a>
+                                    <a href="https://github.com/rhagerty/Capstone-Project">
+                                        <img class="github-img responsive" src="/static/images/github.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 warbler">
+                            <a href="https://twitter-warbler.herokuapp.com/">
+                                <img src="/static/images/warbler-main.png" class="main-img"></a>
 
+                            <div class="text-box">
+                                <p>Full Stack Twitter Clone: "Warbler"</p>
+                                <p>LANGUAGES: Python, SQL, CSS/HTML</p>
+                                <p>LIBRARIES AND FRAMEWORKS: Flask, Unittest, Bootstrap</p>
+                                <p>TOOLS: Git, PostgreSQL, Axios, Flask-WTForms, Flask-SQLAlchemy, Jinja, VSCode,
+                                    Heroku
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 thumb-imgs">
+                                    <a href="https://twitter-warbler.herokuapp.com/">
+                                        <img class="heroku-img responsive" src="/static/images/heroku.png">
+                                    </a>
+                                    <a href="https://github.com/rhagerty/Warbler">
+                                        <img class="github-img responsive" src="/static/images/github.png">
+                                    </a>
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
+                    <div class="row games">
+                        <div class="col-md-4 boggle">
+                            <a href="/display-boggle"><img class="boggle-img" src="/static/images/boggle.png"><span
+                                    class="boggle-link">PLAY NOW</span></a>
+                            <div class="games-text-box">
+                                <p>Boggle Game: Javascript, CSS/HTML</p>
+                                </p>
+                            </div>
+                        </div>'
+                        <div class="col-md-4 connect">
+                            <a href="/display-connect"><img class="connect-img" src="/static/images/connect.png"><span
+                                    class="connect-4-link">PLAY NOW</span></a>
+                            <div class="games-text-box">
+                                <p>Connect4 Game: Javascript, CSS/HTML</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 jeopardy">
+                            <a href="/display-jeopardy"><img class="jeopardy-img" src="/static/images/jeo.jpg"><span
+                                    class="jeopardy-link">PLAY NOW</span></a>
+                            <div class="games-text-box">
+                                <p>Jeopardy Game: Javascript, CSS/HTML</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.js"
-            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <script src="/static/app.js"></script>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="/static/app.js"></script>
 </body>
 
 </html>

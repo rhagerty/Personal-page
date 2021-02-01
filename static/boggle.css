@@ -1,17 +1,25 @@
-#boggle {
+.boggle {
   background-color: rgba(228, 150, 34, 0.8);
   display: table;
   width: 450px;
-  padding-top: 3rem;
   border-radius: 10px;
+  margin: 25% auto;
 }
 
 .boggle-container{
   padding: 3rem;
-  margin: auto;
+  margin: 0 auto;
 }
 
-#boggle>p{
+h1 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 5em;
+  margin: 0 auto;
+  color: white;
+  padding: 1rem;
+}
+
+.boggle>p{
   font-weight: bold;
 }
 
@@ -30,6 +38,8 @@ form>button{
   font-size: 200%;
   background-color: #398bd4;
   margin: 0 auto;
+  padding: 2rem;
+  color: #979899;
 }
 
 .board td {

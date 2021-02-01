@@ -13,11 +13,6 @@
   color: rgb(129, 129, 129);
 }
 
-.moveup {
-  transform: translateY(-2vw);
-  transition: all 2s;
-}
-
 .profile-pic {
   position: absolute;
   filter: opacity(0.3);
@@ -29,7 +24,7 @@
 
 .fas.github {
   height: 3.5rem;
-  filter: invert(.7);
+  filter: invert(0.7);
 }
 
 .linkedin {
@@ -80,7 +75,7 @@ a {
   cursor: pointer;
   font-family: "Roboto Mono", monospace;
   padding: 1rem;
-  color:  rgb(129, 129, 129);
+  color: rgb(129, 129, 129);
 }
 
 a:hover {
@@ -91,7 +86,7 @@ a:hover {
   font-family: "Roboto Mono", monospace;
 }
 
-.gradient-text{
+.gradient-text {
   /* Fallback: Set a background color. */
   background-color: rgb(146, 145, 145);
 
@@ -116,14 +111,14 @@ a:hover {
 
   /* Animate the text when loading the element. */
   /* This animates it on page load and when hovering out. */
-  animation: rainbow-text-simple-animation-rev 3s ease-in-out;
+  animation: rainbow-text-simple-animation-rev 2.5s ease-in;
 }
-body{
+body {
   background-color: black;
 }
 
 .gradient-text:hover {
-  animation: rainbow-text-simple-animation 4s ease-in-out;
+  animation: rainbow-text-simple-animation 2s ease-out;
 }
 
 /* Move the background and make it smaller. */
@@ -142,7 +137,7 @@ body{
 
 /* Move the background and make it larger. */
 /* Animation shown when hovering over the text. */
-@keyframes rainbow-text-simple-animation{
+@keyframes rainbow-text-simple-animation {
   0% {
     background-size: 100%;
   }
@@ -156,13 +151,11 @@ body{
 
 .definition {
   color: rgb(116, 116, 116);
-  margin: -1.5vw auto;
-
-  }
+  margin: -1.3vw auto;
+}
 
 .likes {
-
-  color:rgb(116, 116, 116);
+  color: rgb(116, 116, 116);
   padding: 1rem;
   word-wrap: break-word;
   margin: 4vw auto;
@@ -179,90 +172,104 @@ body{
   right: 0;
   text-align: center;
 }
-.fa-file-export{
+.fa-file-export {
   color: #2d95f0;
   font-size: 3em;
   opacity: 0.8;
 }
 
-small{
+small {
   color: rgb(116, 116, 116);
 }
 
-
-
 /* portfolio scroll box */
 
-.portfolio {
-  height: 100vw;
-  margin-top: 25%;
-}
-
 .portfolio-box {
-  border: none;
-  border-radius: 5px;
-  background-color: rgba(116, 116, 116, 0.7);
-  padding: 2rem;
   font-family: "Roboto Mono", monospace;
-  overflow: scroll;
-  z-index: 4;
+  margin: 25% auto;
+  display: inline-block;
+}
+.portfolio{
+  position: relative;
   margin: auto;
   left: 0;
   right: 0;
+  height: 375px;
 }
 
-.mixologist-img {
-  height: 12em;
-  vertical-align: top;
+.sidebar{
+  margin: 30% auto;
+}
+
+.portfolio {
+  overflow: auto;
+  background-color: rgba(116, 116, 116, 0.7);
   border-radius: 5px;
 }
 
+.capstone,
+.warbler {
+  height: 350px;
+}
+
+.main-img {
+  max-width: 40%;
+  max-height: 50%;
+  float: right;
+  border-radius: 5px;
+  filter: opacity(0.7);
+  right: 0;
+  margin: 2rem auto;
+}
+
 .text-box {
-  display: inline-block;
   color: white;
   text-align: left;
   overflow-wrap: break-word;
-  margin-top: 1rem;
+  padding: 0;
+  margin: auto;
+  height: 275px;
 }
 
 .thumb-imgs {
-  float: right;
-  vertical-align: top;
+  height: 75px;
+  padding: 5px;
+  margin: 0 auto;
+  left: 25%;
 }
 
 .heroku-img,
 .github-img {
   height: 4em;
-  display: block;
-}
-
-/* sidebar */
-.sideLink {
-  margin: auto;
-  right: 0;
-  left: 0;
-  color: white;
 }
 
 .fa-arrow-up,
-.boggle-img,
 .connect-img,
 .jeopardy-img,
-.fa-folder.sidelink {
-  display: block;
-  font-size: 5rem;
+.boggle-img {
+  font-size: 6rem;
   position: absolute;
-  margin: auto;
+  margin: 0 auto;
   right: 0;
   left: 0;
   color: white;
+  padding: 0;
 }
 
-.boggle-link,
+.games{
+  margin: 20px auto;
+  left: 0;
+  right: 0;
+}
+
+.games-text-box{
+  text-align: center;
+  color: white;
+}
+
 .connect-4-link,
-.jeopardy-link,
 .top-link,
-.side-portfolio {
+.boggle-link {
   display: block;
   margin-top: 4rem;
   font-family: "Londrina Solid", cursive;
@@ -271,12 +278,52 @@ small{
 
 .jeopardy-img {
   height: 6rem;
+  margin-top: -15px;
+}
+.jeopardy-link{
+  display: block;
+  margin-top: 2rem;
+  font-family: "Londrina Solid", cursive;
+  font-size: 3rem;
 }
 
-.boggle-img,
-.connect-img {
+.connect-img,
+.boggle-img {
   height: 6rem;
   filter: invert(1);
+}
+
+.resume-container {
+  margin: 25% auto;
+}
+.about-container{
+  margin: 25% auto;
+  background-color:rgba(116, 116, 116, 0.7);
+  overflow: scroll;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #afaeae;
+  overflow-wrap: break-word;
+  display: block;
+  padding: 2rem;
+  max-height: 600px;
+  font-size: 1.5rem;
+}
+
+.video-container{
+  background-color: black;
+  text-align: center;
+  float: left;
+  max-width: 320px;
+}
+.training-img{
+  float: right;
+  background-color: black;
+  max-width: 250px;
+}
+
+.training{
+  height: 200px;
 }
 
 /* Scrollbar styles */
@@ -297,9 +344,5 @@ small{
 
 ::-webkit-scrollbar-thumb:hover {
   background: #70a4e7;
-}
-
-.resume-container {
-  margin-top: 2rem;
 }
 

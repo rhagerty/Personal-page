@@ -17,32 +17,28 @@
     });
 </script>
 {% endif %}
-<a id="connect4">
-    <div class="row connect4-container">
-        <div class="col-sm-3 sidebar">
 
-            <div class="sideLink"><a class="next-page" href="#"><i class="fas fa-folder sidelink"></i><span
-                        class="side-portfolio">Portfolio</span></a></div>
-            <div class="sideLink"><a href="/display-boggle"><img class="boggle-img"
-                        src="/static/images/boggle.png"><span class="boggle-link">BOGGLE</span></a></div>
-            <div class="sideLink"><a href="#"><img class="jeopardy-img" src="/static/images/jeo.jpg"><span
-                        class="jeopardy-link">JEOPARDY</span></a></div>
-            <div class="sideLink"><a class="backToTop" href="#"><i class="fas fa-arrow-up"></i><span
+    <div class="row connect4-container">
+        <a id="connect4">
+        <div class="col-sm-3 sidebar">
+            <div class="sideLink"><a class="backToTop" href="/main"><i class="fas fa-arrow-up"></i><span
                         class="top-link">TOP</span></a></div>
 
         </div>
         <div class="col-md-8 connect4">
             <h1>Connect4</h1>
             <h2>Drop a chip to start game!</h2>
+            <h4 class="game-over"></h4>
             <div id="game">
                 <table cellspacing="0" cellpadding="0" id="board">
                 </table>
                 <div id="rightLeg"></div>
                 <div id="leftLeg"></div>
             </div>
-            <button type="button" id="new-game">Reset Board</button>
+            <button type="button" id="new-game"></button>
         </div>
     </div>
+    
     <script src="/static/connect4.js"></script>
-    <script src="/static/app.js"></script>
+
     {% endblock %}

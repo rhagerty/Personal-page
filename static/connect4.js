@@ -15,10 +15,10 @@ function makeBoard() {
 }
 
 /** makeHtmlBoard: make HTML table and row of column tops. */
-
 function makeHtmlBoard() {
   //  get "htmlBoard" variable from the item in HTML w/ID of "board"
   let htmlBoard = document.getElementById("board");
+  newGameBtn.innerText = "RESET BOARD";
 
   // Creating top row to drop pieces and adding event listener for click
   let top = document.createElement("tr");
@@ -58,24 +58,33 @@ function findSpotForCol(x) {
 /** placeInTable: update DOM to place piece into HTML table of board */
 
 function placeInTable(y, x) {
-  const piece = document.createElement("div");
+  let piece = document.createElement("div");
   piece.classList.add("piece");
   piece.classList.add(`p${currPlayer}`);
 
-  const spot = document.getElementById(`${y}-${x}`);
+  spot = document.getElementById(`${y}-${x}`);
   spot.append(piece);
-
-  newGameBtn.addEventListener("click", function () {
-    piece.classList.remove("p1");
-    piece.classList.remove("p2");
-    document.querySelector("h2").innerText = "Drop a chip to start game!";
-  });
 }
+
+newGameBtn.addEventListener("click", function () {
+  $("#board").empty();
+  board = [];
+  currPlayer = 1;
+  
+  $(".game-over").text("");
+  document.querySelector("h2").innerText = "Player 1's Turn";
+  makeBoard();
+  makeHtmlBoard();
+});
 
 /** endGame: announce game end and update h2 */
 
 function endGame(msg) {
   document.querySelector("h2").innerText = msg;
+  let top = document.getElementById("column-top")
+  top.removeEventListener("click", handleClick);
+  newGameBtn.innerText = "PLAY AGAIN";
+  $(".game-over").text("GAME OVER- Reset Board to Play Again");
   alert(msg);
 }
 
@@ -98,7 +107,9 @@ function handleClick(evt) {
 
   // check for win
   if (checkForWin()) {
-    return endGame(`PLAYER ${currPlayer} WINS!`);
+    setTimeout(function () {
+      return endGame(`PLAYER ${currPlayer} WINS!`);
+    }, 700);
   }
 
   // check if all cells in board are filled; if so call, call endGame

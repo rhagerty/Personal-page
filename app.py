@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify, session
+from flask import Flask, request, url_for, render_template, jsonify, session
 from boggle import Boggle
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app.config["SECRET_KEY"] = "nevertell"
 boggle_game=Boggle()
 
 @app.route("/")
-def homepage():
+def landing_page():
     """Show landing page."""
     if 'username' in session:
         return render_template("home.html")
@@ -15,9 +15,12 @@ def homepage():
         session['username']= 'user'
         return render_template('landingpage.html')
 
-@app.route("/display-about")
-def display_about():
-    return render_template("aboutme.html")
+@app.route("/main")
+def homepage():
+    """Show homepage."""
+
+    return render_template("home.html")
+    
 
 @app.route("/display-portfolio")
 def display_portfolio():
@@ -69,3 +72,9 @@ def display_connect():
     """Show board."""
 
     return render_template("connect4.html", scrollToAnchor='connect4')
+
+@app.route("/display-jeopardy")
+def display_jeopardy():
+    """Show board."""
+
+    return render_template("jeopardy.html", scrollToAnchor='jeopardy')
