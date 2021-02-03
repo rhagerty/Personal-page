@@ -8,7 +8,7 @@ let categories = [];
 
 const NUM_CATEGORIES = 6;
 const NUM_CLUES = 5;
-const apiUrl = "http://jservice.io/api/";
+const apiUrl = "https://jservice.io/api/";
 
 async function getCategoryIds() {
   let response = await axios.get(`${apiUrl}categories?count=100`);
