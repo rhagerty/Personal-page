@@ -1,22 +1,3 @@
-// categories is the main data structure for the app; it looks like this:
-
-//  [
-//    { title: "Math",
-//      clues: [
-//        {question: "2+2", answer: 4, showing: null},
-//        {question: "1+1", answer: 2, showing: null}
-//        ...
-//      ],
-//    },
-//    { title: "Literature",
-//      clues: [
-//        {question: "Hamlet Author", answer: "Shakespeare", showing: null},
-//        {question: "Bell Jar Author", answer: "Plath", showing: null},
-//        ...
-//      ],
-//    },
-//    ...
-//  ]
 
 let categories = [];
 
@@ -31,45 +12,28 @@ const apiUrl = "http://jservice.io/api/";
 
 async function getCategoryIds() {
   let response = await axios.get(`${apiUrl}categories?count=100`);
+  
   let catIds = response.data.map((c) => c.id);
   return _.sampleSize(catIds, NUM_CATEGORIES);
 }
 
-/** Return object with data about a category:
- *
- *  Returns { title: "Math", clues: clue-array }
- *
- * Where clue-array is:
- *   [
- *      {question: "Hamlet Author", answer: "Shakespeare", showing: null},
- *      {question: "Bell Jar Author", answer: "Plath", showing: null},
- *      ...
- *   ]
- */
-
+let clues;
 async function getCategory(catId) {
   let response = await axios.get(`${apiUrl}category?id=${catId}`);
   let cat = response.data;
   let allClues = cat.clues;
 
-  let randomClues = _.sampleSize(allClues, NUM_CLUES);
-  let clues = randomClues.map((c) => ({
+  let randomClues = allClues.slice(0, 5);
+
+  clues = randomClues.map((c) => ({
     question: c.question,
     answer: c.answer,
     value: c.value,
+    catId: c.category_id,
     showing: null,
   }));
-
   return { title: cat.title, clues };
 }
-
-/** Fill the HTML table#jeopardy with the categories & cells for questions.
- *
- * - The <thead> should be filled w/a <tr>, and a <td> for each category
- * - The <tbody> should be filled w/NUM_QUESTIONS_PER_CAT <tr>s,
- *   each with a question for each category in a <td>
- *   (initally, just show a "?" where the question/answer would go.)
- */
 
 async function fillTable() {
   $("thead").empty();
@@ -84,7 +48,11 @@ async function fillTable() {
   for (let clueIdx = 0; clueIdx < NUM_CLUES; clueIdx++) {
     let $tr = $("<tr>");
     for (let catIdx = 0; catIdx < NUM_CATEGORIES; catIdx++) {
-      $tr.append($("<td>").attr("id", `${catIdx}-${clueIdx}`).text("?"));
+      $tr.append(
+        $("<td>")
+          .attr("id", `${catIdx}-${clueIdx}`)
+          .text("$" + categories[catIdx].clues[clueIdx].value)
+      );
     }
     $("tbody").append($tr);
   }
@@ -101,17 +69,18 @@ $("table").click(function handleClick(evt) {
   let id = evt.target.id;
   let [catId, clueId] = id.split("-");
   let clue = categories[catId].clues[clueId];
+  $(evt.target).addClass("showing");
 
   let msg;
 
   if (!clue.showing) {
     msg = clue.question;
     clue.showing = "question";
+    
   } else if (clue.showing === "question") {
     msg = clue.answer;
     clue.showing = "answer";
   } else {
-    // already showing answer; ignore
     return;
   }
 

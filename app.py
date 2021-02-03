@@ -1,10 +1,14 @@
-from flask import Flask, request, url_for, render_template, jsonify, session
+from flask import Flask, request, render_template, jsonify, session
 from boggle import Boggle
+import requests
+from pprint import pprint
+from models import GameTile
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "nevertell"
 
-boggle_game=Boggle()
+boggle_game = Boggle()
+
 
 @app.route("/")
 def landing_page():
@@ -12,15 +16,16 @@ def landing_page():
     if 'username' in session:
         return render_template("home.html")
     else:
-        session['username']= 'user'
+        session['username'] = 'user'
         return render_template('landingpage.html')
+
 
 @app.route("/main")
 def homepage():
     """Show homepage."""
 
     return render_template("home.html")
-    
+
 
 @app.route("/display-portfolio")
 def display_portfolio():
@@ -40,6 +45,7 @@ def display_boggle():
     return render_template("boggle.html", board=board,
                            highscore=highscore,
                            nplays=nplays, scrollToAnchor='boggle')
+
 
 @app.route("/check-word")
 def check_word():
@@ -67,14 +73,18 @@ def post_score():
 
 # Connect4 Routes
 
+
 @app.route("/display-connect")
 def display_connect():
     """Show board."""
 
     return render_template("connect4.html", scrollToAnchor='connect4')
 
+# jeopardy routes
+
+
 @app.route("/display-jeopardy")
 def display_jeopardy():
     """Show board."""
-
+  
     return render_template("jeopardy.html", scrollToAnchor='jeopardy')
