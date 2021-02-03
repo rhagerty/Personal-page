@@ -1,8 +1,5 @@
 from flask import Flask, request, render_template, jsonify, session
 from boggle import Boggle
-import requests
-from pprint import pprint
-from models import GameTile
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "nevertell"
