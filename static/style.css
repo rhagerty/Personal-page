@@ -13,13 +13,15 @@
   color: rgb(129, 129, 129);
 }
 
-.profile-pic {
+.img {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  filter: opacity(0.3);
-  right: 0;
+  opacity: 0.52;
+  overflow: visible;
+  margin: auto;
   left: 0;
-  width: 100vw;
-  z-index: -4;
+  right: 0;
 }
 
 .fas.github {
@@ -36,6 +38,7 @@
 span {
   display: block;
   margin-top: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .navLink {
@@ -50,30 +53,28 @@ span {
   text-align: center;
 }
 
-.main {
-  margin: auto;
-  left: 0;
-  right: 0;
-  overflow: visible;
-  text-align: center;
-}
-
-.page-title > h1 {
+.superShadow {
   font-family: "Kaushan Script", cursive;
-  font-size: 7em;
-  font-weight: bold;
-  padding-top: 0;
-  z-index: 1;
-  margin-top: 7vw;
-  margin-bottom: 0;
-  color: rgb(156, 155, 155);
+  font-weight: bolder;
+  font-size: 10em;
+  margin: 5vw auto;
+  text-align: center;
+  color: rgb(233, 233, 233);
   position: relative;
+}
+.superShadow {
+  text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
+    0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
+    0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%),
+    0 7px 0 hsl(174, 5%, 61%), 0 8px 0 hsl(174, 5%, 60%),
+    0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2),
+    0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
-  font-family: "Roboto Mono", monospace;
   padding: 1rem;
   color: rgb(129, 129, 129);
 }
@@ -83,133 +84,170 @@ a:hover {
 }
 
 .container {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Architects Daughter", cursive;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-.gradient-text {
-  /* Fallback: Set a background color. */
-  background-color: rgb(146, 145, 145);
-
-  /* Create the gradient. */
-  background: linear-gradient(
-    45deg,
-    #979899 16.666%,
-    #969797 16.666%,
-    #8fb3cf 33.333%,
-    #8fb3cf 33.333%,
-    #5fa1d3 50%,
-    #5fa1d3 50%,
-    #3499f1 66.666%,
-    #3499f1 66.666%,
-    #188ff7 83.333%,
-    #188ff7 83.333%
-  );
-  background-size: auto;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* Animate the text when loading the element. */
-  /* This animates it on page load and when hovering out. */
-  animation: rainbow-text-simple-animation-rev 2.5s ease-in;
+::-webkit-scrollbar {
+  width: 12px;
+  z-index: 9;
+  position: relative;
 }
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(105, 161, 233);
+  border-radius: 15px;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
 body {
   background-color: black;
 }
 
-.gradient-text:hover {
-  animation: rainbow-text-simple-animation 2s ease-out;
+.text {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+  font-weight: lighter;
+  position: relative;
 }
 
-/* Move the background and make it smaller. */
-/* Animation shown when entering the page and after the hover animation. */
-@keyframes rainbow-text-simple-animation-rev {
-  0% {
-    background-size: 650%;
-  }
-  40% {
-    background-size: 650%;
-  }
-  100% {
-    background-size: 100%;
-  }
+.noun {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
 }
-
-/* Move the background and make it larger. */
-/* Animation shown when hovering over the text. */
-@keyframes rainbow-text-simple-animation {
-  0% {
-    background-size: 100%;
-  }
-  40% {
-    background-size: 650%;
-  }
-  100% {
-    background-size: 650%;
-  }
+.row.second {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 
 .definition {
-  color: rgb(116, 116, 116);
-  margin: -1.3vw auto;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  padding: 5rem 4rem 5rem 4rem;
+  vertical-align: middle;
+  line-height: 1.5;
+  margin-right: 3%;
+  width: 22%;
+  height: 220px;
 }
 
-.likes {
-  color: rgb(116, 116, 116);
-  padding: 1rem;
-  word-wrap: break-word;
-  margin: 4vw auto;
-  left: 0;
-  right: 0;
+.def-list {
+  list-style-position: inside;
+  margin: 0;
   text-align: left;
+  font-size: 2rem;
 }
 
-.folder {
-  color: rgb(116, 116, 116);
-  padding: 1rem;
-  margin: 4vw auto;
-  left: 0;
-  right: 2rem;
-  text-align: right;
-}
-.fa-file-export {
-  color: #2d95f0;
-  font-size: 3em;
-  opacity: 0.8;
+.skills {
+  overflow-wrap: wrap;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+  line-height: 1.5;
+  padding: 3rem;
+  vertical-align: middle;
 }
 
-small {
-  color: rgb(116, 116, 116);
+.list-group {
+  padding: 5px;
+  list-style-position: inside;
+  margin-left: 5px;
+}
+
+.nextBtn {
+  text-align: center;
+  margin: 15px auto;
+  background-color: transparent;
+  position: relative;
+  box-shadow: 20px 38px 34px -6px hsla(0, 1%, 70%, 0.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 2px #41403e;
+  width: 300px;
+  height: 150px;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.boggle:hover{
+  box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+}
+
+.jeopardy:hover{
+  box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+}
+
+.connect:hover{
+  box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+}
+.nextBtn:hover{
+  box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+}
+
+.upBtn:hover{
+  box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+}
+
+.upBtn{
+  text-align: center;
+  margin: 0 auto;
+  background-color: transparent;
+  position: relative;
+  box-shadow: 20px 38px 34px -6px hsla(0, 1%, 70%, 0.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 2px #41403e;
+  width: 200px;
+  height: 50px;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nextBtn:hover {
+  box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+}
+
+.next {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.main-content {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 2px #41403e;
+  position: relative;
+  background: black;
 }
 
 /* portfolio scroll box */
 
 .portfolio-box {
-  font-family: "Roboto Mono", monospace;
-  margin: 25% auto;
-  display: inline-block;
-}
-.portfolio{
-  position: relative;
-  margin: auto;
-  left: 0;
-  right: 0;
-  height: 375px;
+  margin: 10px auto;
+  display: inline;
+  padding: 3rem;
 }
 
-.sidebar{
-  margin: 30% auto;
-}
-
-.portfolio {
-  overflow: auto;
-  background-color: rgba(116, 116, 116, 0.7);
-  border-radius: 5px;
-}
 
 .capstone,
 .warbler {
-  height: 350px;
+  font-family: "Londrina Solid", cursive;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 2px #41403e;
+  padding: 2rem;
+}
+
+.warbler{
+  margin-top: -20%;
 }
 
 .main-img {
@@ -217,25 +255,22 @@ small {
   max-height: 50%;
   float: right;
   border-radius: 5px;
-  filter: opacity(0.7);
+  filter: opacity(0.8);
   right: 0;
   margin: 2rem auto;
 }
 
 .text-box {
-  color: white;
+  color: rgb(231, 231, 231);
   text-align: left;
   overflow-wrap: break-word;
-  padding: 0;
-  margin: auto;
-  height: 275px;
+  font-size: 2rem;
 }
 
 .thumb-imgs {
   height: 75px;
   padding: 5px;
   margin: 0 auto;
-  left: 25%;
 }
 
 .heroku-img,
@@ -243,23 +278,31 @@ small {
   height: 4em;
 }
 
-.fa-arrow-up,
-.connect-img,
-.jeopardy-img,
-.boggle-img {
-  font-size: 6rem;
-  position: absolute;
-  margin: 0 auto;
-  right: 0;
-  left: 0;
-  color: white;
-  padding: 0;
+.github-img{
+  filter: invert(1);
 }
 
-.games{
-  margin: 20px auto;
-  left: 0;
-  right: 0;
+.connect-img,
+.boggle-img {
+  font-size: 7rem;
+  color: white;
+  padding: 1rem;
+}
+
+.boggle, .connect, .jeopardy{
+  font-size: 2rem;
+  margin-left: 10px;
+  border: solid 2px #41403e;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 20px 38px 34px -6px hsla(0, 1%, 70%, 0.2);
+  text-align: center;
+  padding: 2rem;
+}
+
+a:hover{
+  cursor: pointer;
+  box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+  text-decoration: none;
 }
 
 .games-text-box{
@@ -268,38 +311,30 @@ small {
 }
 
 .connect-4-link,
-.top-link,
+.jeopardy-link,
 .boggle-link {
   display: block;
-  margin-top: 4rem;
-  font-family: "Londrina Solid", cursive;
-  font-size: 3rem;
+  font-size: 2rem;
+  margin: -2px auto;
 }
 
 .jeopardy-img {
-  height: 6rem;
-  margin-top: -15px;
-}
-.jeopardy-link{
-  display: block;
-  margin-top: 2rem;
-  font-family: "Londrina Solid", cursive;
-  font-size: 3rem;
+  height: 8rem;
+  padding: 1rem;
 }
 
 .connect-img,
 .boggle-img {
-  height: 6rem;
+  height: 1.5em;
   filter: invert(1);
 }
 
 .resume-container {
-  margin: 25% auto;
+  margin: 15px auto;
 }
 .about-container{
-  margin: 25% auto;
+  margin: 15px auto;
   background-color:rgba(116, 116, 116, 0.7);
-  overflow: scroll;
   border-radius: 10px;
   padding: 1rem;
   color: #afaeae;
@@ -324,25 +359,4 @@ small {
 
 .training{
   height: 200px;
-}
-
-/* Scrollbar styles */
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-track {
-  border: 1px solid #70a4e7;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #70a4e7;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #70a4e7;
-}
-
+} 

@@ -1,38 +1,50 @@
-$(".next-page").click(function () {
+$(".nextBtn").click(function () {
+  $(".header").hide();
+  $(".second").hide();
   $(".portfolio-box").show();
-  $(".sidebar").show();
   $(".resume-container").hide();
-  $("html, body").animate(
-    {
-      scrollTop: parseInt($(".portfolio-box").offset().top),
-    },
-    2000
-  );
+  $(".nextBtn").hide();
+  $(".upBtn").show();
+});
+$(".upBtn").click(function () {
+  $(".header").show();
+  $(".second").show();
+  $(".resume-container").hide();
+  $(".portfolio-box").hide();
+  $(".jeopardy-container").hide();
+  $(".connect4-container").hide();
+  $(".boggle-container").hide();
+  $(".nextBtn").show();
+  $(".upBtn").hide();
 });
 
 $(".resume").click(function () {
   $(".portfolio-box").hide();
+  $(".header").hide();
+  $(".second").hide();
   $(".resume-container").show();
-  $(".sidebar").show();
-  $("html, body").animate(
-    {
-      scrollTop: parseInt($(".resume-container").offset().top),
-    },
-    2000
-  );
+  $(".about-container").hide();
+  $(".nextBtn").hide();
+  $(".upBtn").show();
+});
+
+$(".next-page").click(function () {
+  $(".header").hide();
+  $(".second").hide();
+  $(".portfolio-box").show();
+  $(".resume-container").hide();
+  $(".nextBtn").hide();
+  $(".upBtn").show();
 });
 
 $(".about").click(function () {
   $(".portfolio-box").hide();
   $(".resume-container").hide();
-  $(".sidebar").show();
+  $(".header").hide();
+  $(".second").hide();
   $(".about-container").show();
-  $("html, body").animate(
-    {
-      scrollTop: parseInt($(".about-container").offset().top),
-    },
-    2000
-  );
+  $(".nextBtn").hide();
+  $(".upBtn").show();
 });
 
 $(".boggle-img").click(function () {
@@ -40,17 +52,4 @@ $(".boggle-img").click(function () {
   $(".resume-container").hide();
 });
 
-$(document).ready(function () {});
-$(".backToTop").click(function () {
-  $("html, body").animate(
-    {
-      scrollTop: "0px",
-    },
-    1000
-  );
-  $(".resume-container").hide();
-  $(".portfolio-box").hide();
-  $(".jeopardy-container").hide();
-  $(".connect4-container").hide();
-  $(".boggle-container").hide();
-});
+

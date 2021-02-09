@@ -1,77 +1,79 @@
-
-
-.jeopardy{
-	margin: 0 auto;
-	text-align: center;
-	font-family: "Bebas Neue", cursive;
-	margin: 0 auto;
-	left: 0;
-	right: 0;
-	text-align: center;
+.jeopardy {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
-.jeopardy-board{
-margin: 25% auto;
+.jeopardy-board {
+  margin: 25% auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 .table tr,
 td {
-	border: 3px solid black;
-	background-color: #060ce9;
-	font-size: 2rem;
-	padding: 1rem;
-	text-transform: uppercase;
-	height: 4em;
-	text-shadow: black 3px 1px;
-	vertical-align: middle;
+  border: 3px solid black;
+  background-color: #060ce9;
+  font-size: 2rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  height: 4em;
+  text-shadow: black 3px 1px;
+  vertical-align: middle;
 }
 
-.table{
-	margin-top: 2rem;
-	margin: auto;
-	left: 0;
-	right: 0;
-	border: 3px solid black;
-	text-align: center;
-	overflow-wrap: break-word;
-	max-width: 700px;
+.table {
+  margin-top: 2rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border: 3px solid black;
+  text-align: center;
+  overflow-wrap: break-word;
+  max-width: 700px;
 }
 td {
-	color: rgb(190, 180, 83);
-	text-shadow: black 4px 1px;
-  }
+  color: rgb(190, 180, 83);
+  text-shadow: black 4px 1px;
+}
 th {
-	font-size: 1.5rem;
-	border: 3px solid black;
-	color: white;
-	text-align: center;
-  }
+  font-size: 1.5rem;
+  border: 3px solid black;
+  color: white;
+  text-align: center;
+}
 
-#jeopardy {
-	height: 4em;
+#jeopardy-img {
+  width: 200px;
+ 
 }
 
 .showing {
-	color: white;
-	font-size: 1.5rem;
-	text-shadow: black 3px 1px;
-  }
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: rgb(143, 83, 83) 3px 1px;
+}
 
 td:hover {
-	cursor: pointer;
-	border: outset yellow;
+  cursor: pointer;
+  border: outset yellow;
 }
 
 .startGame {
-	margin-top: 10px;
-	padding: .7em;
-	border-radius: 10%;
-	font-family: "Bebas Neue", cursive;
-	width: 8em;
-	background-color: rgb(190, 190, 6);
-	color: black;
+  margin-top: 10px;
+  padding: 1rem;
+  border-radius: 10%;
+  font-family: "Bebas Neue", cursive;
+  background-color: white;
+  color: black;
+  font-size: 2rem;
 }
 
 .startGame:hover {
-	cursor: pointer;
-	border: outset yellow;
+  cursor: pointer;
+  border: outset yellow;
 }

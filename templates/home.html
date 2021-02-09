@@ -8,26 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rebecca Hagerty</title>
     <script src="https://unpkg.com/jquery"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kaushan+Script&display=swap"
+        rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Yusei+Magic&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Delius+Unicase:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Londrina+Solid&display=swap"
-        rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="/static/style.css">
     {% endblock %}
@@ -35,60 +22,61 @@
 
 <body>
 
-    <div class="image-overlay">
-        <img class="profile-pic" src="/static/images/me.png">
-    </div>
-    <div class="container">
+    <div"><img class="img" src="/static/images/me.jpg"></div>
+        <div class="container">
 
-        <div class="row" id="navbar-row">
-            <div class="col-12 navBar">
-                <div class="navLink"><a class="resume" href="#"><i class="fas fa-file"></i><span>Resume</span></a>
-                </div>
-                <div class="navLink"><a class="next-page" href="#"><i
-                            class="fas fa-folder"></i><span>Portfolio</span></a></div>
-                <div class="navLink"><a class="about" href="#"><i class="fas fa-info"></i><span>About</span></a>
-                </div>
-                <div class="navLink"><a class="email" href="mailto:rlhagerty@hotmail.com"><i
-                            class="fas fa-envelope"></i><span>Email</span></a></div>
-                <div class="navLink"><a href="https://www.linkedin.com/in/hagertyrebecca/"><img
-                            class="linkedin responsive" src="/static/images/linkedin.png"><span>Linkedin</span></a>
-                </div>
-                <div class="navLink"><a href="https://github.com/rhagerty/"><img class="fas github responsive"
-                            src="/static/images/github.png"><span>Github</span></a></div>
-            </div>
-        </div>
-
-        <div class="row main">
-            <div class="col-12 page-title main">
-                <h1 class="gradient-text">Rebecca Hagerty</h1>
-
-                <div class="col-12 definition">
-                    <h5><i>noun</i> <small>ruh-beh-kuh ha-GUR-tee</small></h5>
-                    <h5>1. computer nerd</h5>
-                    <h5>2. web development specialist</h5>
-                </div>
-            </div>
-            <div class="row likesRow">
-
-                <div class="col-sm-12 col-md-6 likes">
-                    <h4>Skills:</h4>
-                    <div class="col-md-8">
-                        <h5>1. JavaScript, CSS, HTML, Flask, Python, SQL, Git, Express, NodeJS, PostgreSQL</h5>
-                        <h5>2. Making objects in my hand disappear into another dimension.</h5>
+            <div class="row" id="navbar-row">
+                <div class="col-12 navBar">
+                    <div class="navLink"><a class="resume" href="#"><i class="fas fa-file"></i><span>Resume</span></a>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 folder">
-                    <h4>What I've done so far:</h4>
-                    <a class="next-page" href="#"><i class="fas fa-file-export"></i></a>
+                    <div class="navLink"><a class="next-page" href="#"><i
+                                class="fas fa-folder"></i><span>Portfolio</span></a></div>
+                    <div class="navLink"><a class="about" href="#"><i class="fas fa-info"></i><span>About</span></a>
+                    </div>
+                    <div class="navLink"><a class="email" href="mailto:rlhagerty@hotmail.com"><i
+                                class="fas fa-envelope"></i><span>Email</span></a></div>
+                    <div class="navLink"><a href="https://www.linkedin.com/in/hagertyrebecca/"><img
+                                class="linkedin responsive" src="/static/images/linkedin.png"><span>Linkedin</span></a>
+                    </div>
+                    <div class="navLink"><a href="https://github.com/rhagerty/"><img class="fas github responsive"
+                                src="/static/images/github.png"><span>Github</span></a></div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-8 header">
+                    <h1 class="superShadow">Rebecca Hagerty</h1>
+                </div>
+            </div>
+            <div class="row second">
+                <div class="col-md-3 col-md-offset-1 main-content definition">
+                    <p class="text"> reh&#183BEH&#183kuh hag&#183UR&#183tee</p>
+                    <small class="noun"><i>noun</i></small>
+                    <ol class="def-list">
+                        <li>computer nerd</li>
+                        <li>web development specialist</li>
+                    </ol>
+                </div>
+
+                <div class="col-md-3 main-content skills">
+                    <h3 class="skills-title">Skills:</h4>
+                        <ol class="list-group">
+                            <li>JS, CSS, HTML, Flask, Python, SQL, Git, Express, NodeJS,
+                                PostgreSQL,
+                                React</li>
+                            <li>Making objects in my hand disappear into another dimension
+                            </li>
+                        </ol>
+                </div>
+            </div>
+            <div class="row next-page">
+                <div class="col-md-8 next">
+                    <button class='nextBtn'>My projects so far</button>
+                </div>
+            </div>
+
 
 
             <div class="row">
-                <div class="col-md-2 sidebar" style="display: none;">
-                    <div class="sideLink"><a class="backToTop" href="#"><i class="fas fa-arrow-up"></i><span
-                                class="top-link">TOP</span></a></div>
-                </div>
                 <div class="col-md-9 about-container" style="display: none;">
                     <p>
                         My early career has been in automotive MfgE until
@@ -144,13 +132,13 @@
                 </div>
 
 
-                <div class="col-md-10 resume-container" style="display: none;">
+                <div class="col-md-10 col-md-offset-1 resume-container" style="display: none;">
                     <iframe src="https://resume.creddle.io/embed/74s5v3886t8" width="850" height="1100"
                         seamless></iframe>
                 </div>
-                <div class="col-sm-10 col-md-8 portfolio-box" style="display: none;">
-                    <div class="row portfolio">
-                        <div class="col-sm-12 col-md-6 capstone">
+                <div class="col-sm-10 col-md-10 portfolio-box" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1 capstone">
                             <a href="https://your-personal-mixologist.herokuapp.com/">
                                 <img src="/static/images/main-page.png" class="main-img"></a>
 
@@ -163,7 +151,7 @@
                                 </p>
                             </div>
                             <div class="row">
-                                <div class="col-sm-12 col-md-6 thumb-imgs">
+                                <div class="col-sm-12 col-md-5 thumb-imgs">
                                     <a href="https://your-personal-mixologist.herokuapp.com/">
                                         <img class="heroku-img responsive" src="/static/images/heroku.png">
                                     </a>
@@ -173,69 +161,80 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-6 warbler">
-                            <a href="https://twitter-warbler.herokuapp.com/">
-                                <img src="/static/images/warbler-main.png" class="main-img"></a>
 
-                            <div class="text-box">
-                                <p>Full Stack Twitter Clone: "Warbler"</p>
-                                <p>LANGUAGES: Python, SQL, CSS/HTML</p>
-                                <p>LIBRARIES AND FRAMEWORKS: Flask, Unittest, Bootstrap</p>
-                                <p>TOOLS: Git, PostgreSQL, Axios, Flask-WTForms, Flask-SQLAlchemy, Jinja, VSCode,
-                                    Heroku
-                                </p>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6 thumb-imgs">
-                                    <a href="https://twitter-warbler.herokuapp.com/">
-                                        <img class="heroku-img responsive" src="/static/images/heroku.png">
-                                    </a>
-                                    <a href="https://github.com/rhagerty/Warbler">
-                                        <img class="github-img responsive" src="/static/images/github.png">
-                                    </a>
+                        <div class="col-md-2">
+                            <a href="/display-boggle">
+                                <div class="boggle">
+                                    <img class="boggle-img" src="/static/images/boggle.png"><span
+                                        class="boggle-link">PLAY NOW</span>
+                                    <div class="games-text-box">
+                                        <p>Boggle Clone: JS, CSS/HTML</p>
+                                        </p>
+                                    </div>
                                 </div>
+                            </a>
+                            <a href="/display-connect">
+                                <div class="connect">
+                                    <img class="connect-img" src="/static/images/connect.png"><span
+                                        class="connect-4-link">PLAY
+                                        NOW</span>
+                                    <div class="games-text-box">
+                                        <p>Connect4 Clone: JS, CSS/HTML</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/display-jeopardy">
+                                <div class="jeopardy">
+                                    <img class="jeopardy-img" src="/static/images/jeo.jpg">
+                                    <span class="jeopardy-link">PLAY NOW</span>
+                                    <div class="games-text-box">
+                                        <p>Jeopardy Clone: JS, CSS/HTML</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 col-md-offset-1 warbler">
+                                <a href="https://twitter-warbler.herokuapp.com/">
+                                    <img src="/static/images/warbler-main.png" class="main-img"></a>
+
+                                <div class="text-box">
+                                    <p>Full Stack Twitter Clone: "Warbler"</p>
+                                    <p>LANGUAGES: Python, SQL, CSS/HTML</p>
+                                    <p>LIBRARIES AND FRAMEWORKS: Flask, Unittest, Bootstrap</p>
+                                    <p>TOOLS: Git, PostgreSQL, Axios, Flask-WTForms, Flask-SQLAlchemy, Jinja, VSCode,
+                                        Heroku
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5 thumb-imgs">
+                                        <a href="https://twitter-warbler.herokuapp.com/">
+                                            <img class="heroku-img responsive" src="/static/images/heroku.png">
+                                        </a>
+                                        <a href="https://github.com/rhagerty/Warbler">
+                                            <img class="github-img responsive" src="/static/images/github.png">
+                                        </a>
+                                    </div>
+                                </div>
+
                             </div>
 
-                        </div>
-                    </div>
-                    <div class="row games">
-                        <div class="col-md-4 boggle">
-                            <a href="/display-boggle"><img class="boggle-img" src="/static/images/boggle.png"><span
-                                    class="boggle-link">PLAY NOW</span></a>
-                            <div class="games-text-box">
-                                <p>Boggle Game: Javascript, CSS/HTML</p>
-                                </p>
-                            </div>
-                        </div>'
-                        <div class="col-md-4 connect">
-                            <a href="/display-connect"><img class="connect-img" src="/static/images/connect.png"><span
-                                    class="connect-4-link">PLAY NOW</span></a>
-                            <div class="games-text-box">
-                                <p>Connect4 Game: Javascript, CSS/HTML</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 jeopardy">
-                            <a href="/display-jeopardy"><img class="jeopardy-img" src="/static/images/jeo.jpg"><span
-                                    class="jeopardy-link">PLAY NOW</span></a>
-                            <div class="games-text-box">
-                                <p>Jeopardy Game: Javascript, CSS/HTML</p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
+
+                {% block content%}
+                {% endblock %}
+
             </div>
-
-            {% block content%}
-            {% endblock %}
-
         </div>
-    </div>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="/static/ui.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="/static/ui.js"></script>
 </body>
 
 </html>

@@ -1,19 +1,4 @@
-// animation on first page load
 
-$(document).ready(function () {
-  setTimeout(function () {
-    $(".gradient-text").css("visibility", "visible");
-  }, 500);
-  setTimeout(function () {
-    $(".definition").css("visibility", "visible");
-  }, 3000);
-  setTimeout(function () {
-    $(".likes").css("visibility", "visible");
-  }, 4500);
-  setTimeout(function () {
-    $(".folder").css("visibility", "visible");
-  }, 4500);
-});
 
 $(".next-page").click(function () {
   $(".jeopardy-container").hide();
