@@ -11,23 +11,12 @@
 
 {% block content%}
 
-{% if scrollToAnchor %}
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.location.hash = '#{{ scrollToAnchor }}';
-  });
-</script>
-{% endif %}
 <div class="row jeopardy-container">
-  <div class="col-sm-2 sidebar">
-    <div class="sideLink"><a class="backToTop" href="/main"><i class="fas fa-arrow-up"></i><span
-          class="top-link">TOP</span></a></div>
-
-  </div>
   <div class="col-sm-10 col-md-10 jeopardy-board">
     <a id="jeopardy">
-      <img id="jeopardy-img" src="https://freepikpsd.com/wp-content/uploads/2019/10/jeopardy-logo-png-3-Transparent-Images.png">
-     
+      <img id="jeopardy-img"
+        src="https://freepikpsd.com/wp-content/uploads/2019/10/jeopardy-logo-png-3-Transparent-Images.png">
+
       <table cellspacing="0" class="table">
         <thead>
           <tr>
@@ -35,7 +24,7 @@
         </thead>
         <tbody>
           <tr>
-          
+
           </tr>
         </tbody>
       </table>

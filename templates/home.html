@@ -27,11 +27,11 @@
 
             <div class="row" id="navbar-row">
                 <div class="col-12 navBar">
-                    <div class="navLink"><a class="resume" href="#"><i class="fas fa-file"></i><span>Resume</span></a>
+                    <div class="navLink"><a class="resume" href="/display-resume"><i class="fas fa-file"></i><span>Resume</span></a>
                     </div>
-                    <div class="navLink"><a class="next-page" href="#"><i
+                    <div class="navLink"><a href="/display-portfolio"><i
                                 class="fas fa-folder"></i><span>Portfolio</span></a></div>
-                    <div class="navLink"><a class="about" href="#"><i class="fas fa-info"></i><span>About</span></a>
+                    <div class="navLink"><a class="about" href="/display-about"><i class="fas fa-info"></i><span>About</span></a>
                     </div>
                     <div class="navLink"><a class="email" href="mailto:rlhagerty@hotmail.com"><i
                                 class="fas fa-envelope"></i><span>Email</span></a></div>
@@ -42,6 +42,7 @@
                                 src="/static/images/github.png"><span>Github</span></a></div>
                 </div>
             </div>
+            {% block content%}
             <div class="row">
                 <div class="col-md-8 header">
                     <h1 class="superShadow">Rebecca Hagerty</h1>
@@ -74,68 +75,6 @@
                 </div>
             </div>
 
-
-
-            <div class="row">
-                <div class="col-md-9 about-container" style="display: none;">
-                    <p>
-                        My early career has been in automotive MfgE until
-                        2019 when I left automotive in pursuit of a more fulfilling career path. I hadn’t
-                        found my previous positions challenging and was lacking the passion to return to
-                        engineering. I
-                        spent a few months traveling and then began working as a
-                        personal trainer <sub>Exhibit 1</sub> while I pondered my next transition. </p>
-                    <div class="col training-img">
-                        <img class="training" src="/static/images/training.png">
-                        </img>
-                        <small class="exhibit">Exhibit 1</small>
-                    </div>
-                    <p>
-                        Quarantine brought a swift end to my personal training career, but helped me rediscover
-                        the
-                        extent of my engineering “brain” as I found myself passing
-                        time building household solutions. E.g. I couldn't find a spice cart to fit beside my stove
-                        and decided to build <sub>Exhibit 1</sub> my own. I crave complex mental
-                        stimulation and began researching career paths that would satisfy this need for
-                        mental engagement and variety.
-                    </p>
-                    <div class="col video-container">
-                        <video class="video" width="320" height="240" controls autoplay>
-                            <source src="/static/images/video.mp4" type=video/mp4>
-                        </video>
-                        <small class="exhibit">Exhibit 2</small>
-                    </div>
-                    <p>My fascination with technology, computers, and coding began before I can remember. As a
-                        preteen I
-                        dabbled with html styling for my social media pages (anyone remember LiveJournal or
-                        Myspace??)
-                        and was an avid video gamer. It didn't take long before I discovered
-                        the
-                        kismet connection between my technical brain and computer savvy, and made the decision to
-                        transition to software engineering. </p>
-
-                    <p>
-                        <b>Enter: Springboard's Software Engineering Bootcamp </b>
-                    </p>
-                    <p>I dove head first
-                        into the curriculum and was engrossed with the continuous challenges and daily “puzzles” I
-                        was
-                        solving using the type of logic that I enjoy (math?! algorithms?! Oh yes!). I’m
-                        reinvigorated with passion for this
-                        newfound career choice, and in my current job search I’m focusing on companies with a strong
-                        culture
-                        where my passion can be collaborated with other incredibly passionate individuals.
-                        Essentially,
-                        I’m looking to make an impact and accept a challenge!</p>
-
-                    <h3>TLDR- Former Mfg Engineer turned computer programmer</h3>
-                </div>
-
-
-                <div class="col-md-10 col-md-offset-1 resume-container" style="display: none;">
-                    <iframe src="https://resume.creddle.io/embed/74s5v3886t8" width="850" height="1100"
-                        seamless></iframe>
-                </div>
                 <div class="col-sm-10 col-md-10 portfolio-box" style="display: none;">
                     <div class="row">
                         <div class="col-md-5 col-md-offset-1 capstone">
@@ -218,13 +157,11 @@
                                 </div>
 
                             </div>
-
-
                         </div>
                     </div>
                 </div>
 
-                {% block content%}
+                
                 {% endblock %}
 
             </div>

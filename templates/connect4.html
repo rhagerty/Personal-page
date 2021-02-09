@@ -10,35 +10,23 @@
 
 {% block content%}
 
-{% if scrollToAnchor %}
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.location.hash = '#{{ scrollToAnchor }}';
-    });
-</script>
-{% endif %}
 
-    <div class="row connect4-container">
-        <a id="connect4">
-        <div class="col-sm-3 sidebar">
-            <div class="sideLink"><a class="backToTop" href="/main"><i class="fas fa-arrow-up"></i><span
-                        class="top-link">TOP</span></a></div>
+<div class="row connect4-container">
 
+    <div class="col-md-8 connect4">
+        <h1>Connect4</h1>
+        <h2>Drop a chip to start game!</h2>
+        <h4 class="game-over"></h4>
+        <div id="game">
+            <table cellspacing="0" cellpadding="0" id="board">
+            </table>
+            <div id="rightLeg"></div>
+            <div id="leftLeg"></div>
         </div>
-        <div class="col-md-8 connect4">
-            <h1>Connect4</h1>
-            <h2>Drop a chip to start game!</h2>
-            <h4 class="game-over"></h4>
-            <div id="game">
-                <table cellspacing="0" cellpadding="0" id="board">
-                </table>
-                <div id="rightLeg"></div>
-                <div id="leftLeg"></div>
-            </div>
-            <button type="button" id="new-game"></button>
-        </div>
+        <button type="button" id="new-game"></button>
     </div>
-    
-    <script src="/static/connect4.js"></script>
+</div>
 
-    {% endblock %}
+<script src="/static/connect4.js"></script>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "home.html" %}
+
+{% block content%}
+<div class="col-sm-10 col-md-10 portfolio-box">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-1 capstone">
+            <a href="https://your-personal-mixologist.herokuapp.com/">
+                <img src="/static/images/main-page.png" class="main-img"></a>
+
+            <div class="text-box">
+                <p>Full Stack Web App: "Your Personal Mixologist"</p>
+                <p>LANGUAGES: Python, JavaScript, SQL, CSS/HTML</p>
+                <p>LIBRARIES AND FRAMEWORKS: Flask, JQuery, Unittest, Bootstrap</p>
+                <p>TOOLS: Git, PostgreSQL, Axios, Flask-WTForms, Flask-SQLAlchemy, Jinja, VSCode,
+                    Heroku
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-5 thumb-imgs">
+                    <a href="https://your-personal-mixologist.herokuapp.com/">
+                        <img class="heroku-img responsive" src="/static/images/heroku.png">
+                    </a>
+                    <a href="https://github.com/rhagerty/Capstone-Project">
+                        <img class="github-img responsive" src="/static/images/github.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <a href="/display-boggle">
+                <div class="boggle">
+                    <img class="boggle-img" src="/static/images/boggle.png"><span class="boggle-link">PLAY NOW</span>
+                    <div class="games-text-box">
+                        <p>Boggle Clone: JS, CSS/HTML</p>
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="/display-connect">
+                <div class="connect">
+                    <img class="connect-img" src="/static/images/connect.png"><span class="connect-4-link">PLAY
+                        NOW</span>
+                    <div class="games-text-box">
+                        <p>Connect4 Clone: JS, CSS/HTML</p>
+                    </div>
+                </div>
+            </a>
+            <a href="/display-jeopardy">
+                <div class="jeopardy">
+                    <img class="jeopardy-img" src="/static/images/jeo.jpg">
+                    <span class="jeopardy-link">PLAY NOW</span>
+                    <div class="games-text-box">
+                        <p>Jeopardy Clone: JS, CSS/HTML</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1 warbler">
+                <a href="https://twitter-warbler.herokuapp.com/">
+                    <img src="/static/images/warbler-main.png" class="main-img"></a>
+
+                <div class="text-box">
+                    <p>Full Stack Twitter Clone: "Warbler"</p>
+                    <p>LANGUAGES: Python, SQL, CSS/HTML</p>
+                    <p>LIBRARIES AND FRAMEWORKS: Flask, Unittest, Bootstrap</p>
+                    <p>TOOLS: Git, PostgreSQL, Axios, Flask-WTForms, Flask-SQLAlchemy, Jinja, VSCode,
+                        Heroku
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-5 thumb-imgs">
+                        <a href="https://twitter-warbler.herokuapp.com/">
+                            <img class="heroku-img responsive" src="/static/images/heroku.png">
+                        </a>
+                        <a href="https://github.com/rhagerty/Warbler">
+                            <img class="github-img responsive" src="/static/images/github.png">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
