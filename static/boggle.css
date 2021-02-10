@@ -1,14 +1,16 @@
 .boggle {
   background-color: rgba(228, 150, 34, 0.8);
   display: table;
-  width: 450px;
+  width: 400px;
   border-radius: 10px;
-  margin: 25% auto;
+  margin: auto;
 }
 
 .boggle-container{
   padding: 3rem;
-  margin: 0 auto;
+  margin: auto;
+  left:0;
+  right:0;
 }
 
 h1 {

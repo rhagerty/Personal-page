@@ -24,6 +24,7 @@
   right: 0;
 }
 
+
 .fas.github {
   height: 3.5rem;
   filter: invert(0.7);
@@ -46,7 +47,7 @@ span {
   position: relative;
   right: 0;
   left: 0;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .navBar {
@@ -56,8 +57,8 @@ span {
 .superShadow {
   font-family: "Kaushan Script", cursive;
   font-weight: bolder;
-  font-size: 7em;
-  margin: 5vw auto;
+  font-size: 6em;
+  margin: 3vw auto;
   text-align: center;
   color: rgb(233, 233, 233);
   position: relative;
@@ -117,68 +118,68 @@ body {
   width: 100%;
   color: rgba(255, 255, 255, 0.7);
   font-family: "Roboto Mono", monospace;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: lighter;
-  position: relative;
+  
+  text-align: center;
 }
 
 .noun {
   font-style: italic;
   color: rgba(255, 255, 255, 0.7);
   font-family: "Roboto Mono", monospace;
-  font-size: 14px;
-}
-.row.second {
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+  font-size: 12px;
+  padding-left: 1rem;
 }
 
 .definition {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-  padding: 5rem 4rem 5rem 4rem;
-  vertical-align: middle;
-  line-height: 1.5;
-  margin-right: 3%;
-  width: 22%;
-  height: 220px;
+  padding: 4rem 3rem;
+  margin-left: 5%;
+  position: relative;
+}
+@media only screen and (max-width: 700px) {
+  .definition {
+    margin: 0 auto;
+  }
 }
 
 .def-list {
   list-style-position: inside;
   margin: 0;
   text-align: left;
-  font-size: 2rem;
+  font-size: 16px;
 }
 
 .skills {
-  overflow-wrap: wrap;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 2rem;
-  line-height: 1.5;
-  padding: 3rem;
-  vertical-align: middle;
+  padding: 2rem 2rem 2rem 4rem;
+  margin: 3% auto;
 }
 
 .list-group {
   padding: 5px;
   list-style-position: inside;
   margin-left: 5px;
+  line-height: 1.6;
+  font-size: 15px;
 }
-
+.next{
+  height: 300px;
+ 
+}
 .nextBtn {
-  text-align: center;
-  margin: 15px auto;
-  background-color: transparent;
-  position: relative;
+  background-color: black;
   box-shadow: 20px 38px 34px -6px hsla(0, 1%, 70%, 0.2);
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   border: solid 2px #41403e;
-  width: 300px;
-  height: 150px;
-  font-size: 2rem;
+  width: min-content;
+  position: absolute;
+padding: 2rem 4rem;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
+  margin: -7% 0 0 15%;
+  
 }
 .boggle:hover{
   box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
@@ -199,20 +200,6 @@ body {
   box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
 }
 
-.upBtn{
-  text-align: center;
-  margin: 0 auto;
-  background-color: transparent;
-  position: relative;
-  box-shadow: 20px 38px 34px -6px hsla(0, 1%, 70%, 0.2);
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  border: solid 2px #41403e;
-  width: 200px;
-  height: 50px;
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .nextBtn:hover {
   box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
 }
@@ -229,14 +216,10 @@ body {
   background: black;
 }
 
-/* portfolio scroll box */
-
 .portfolio-box {
   margin: 10px auto;
-  display: inline;
   padding: 3rem;
 }
-
 
 .capstone,
 .warbler {
@@ -245,8 +228,13 @@ body {
   padding: 2rem;
 }
 
+.capstone{
+  margin: 0 1rem 0 2%;
+}
+
 .warbler{
-  margin-top: -20%;
+  background: black;
+  margin: -6% 0 0 10%;
 }
 
 .main-img {
@@ -262,8 +250,7 @@ body {
 .text-box {
   color: rgb(231, 231, 231);
   text-align: left;
-  overflow-wrap: break-word;
-  font-size: 2rem;
+  font-size: 16px;
 }
 
 .thumb-imgs {
@@ -283,19 +270,37 @@ body {
 
 .connect-img,
 .boggle-img {
-  font-size: 7rem;
+  font-size: 6rem;
   color: white;
-  padding: 1rem;
+}
+
+.two{
+  display: block;
 }
 
 .boggle, .connect, .jeopardy{
-  font-size: 2rem;
-  margin-left: 10px;
+  font-size: 14px;
   border: solid 2px #41403e;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   box-shadow: 20px 38px 34px -6px hsla(0, 1%, 70%, 0.2);
   text-align: center;
-  padding: 2rem;
+}
+
+.jeopardy{
+  width: max-content;
+  padding: 1rem 3em 0 3rem;
+  margin: 2% 0 0 3%;
+}
+.connect{
+  margin: 2% 0 0 0;
+  width: min-content;
+  padding: 0 5rem 0 5rem;
+}
+
+.boggle{
+  width: min-content;
+  padding: 2rem 1rem;
+  margin: 5% 0 0 5px;
 }
 
 a:hover{
@@ -312,19 +317,19 @@ a:hover{
 .connect-4-link,
 .jeopardy-link,
 .boggle-link {
-  display: block;
-  font-size: 2rem;
+  font-size: 14px;
   margin: -2px auto;
 }
 
 .jeopardy-img {
   height: 8rem;
-  padding: 1rem;
+  margin: 1rem;
 }
 
 .connect-img,
 .boggle-img {
-  height: 1.5em;
+  height: 1em;
+  margin: 1rem;
   filter: invert(1);
 }
 
