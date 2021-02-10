@@ -24,71 +24,71 @@
 <body>
 
     <img class="img" src="">
-        <div class="container">
+    <div class="container">
 
-            <div class="row" id="navbar-row">
-                <div class="col-12 navBar">
-                    <div class="navLink"><a class="resume" href="/display-resume"><i
-                                class="fas fa-file"></i><span>Resume</span></a>
-                    </div>
-                    <div class="navLink"><a href="/display-portfolio"><i
-                                class="fas fa-folder"></i><span>Portfolio</span></a></div>
-                    <div class="navLink"><a class="about" href="/display-about"><i
-                                class="fas fa-info"></i><span>About</span></a>
-                    </div>
-                    <div class="navLink"><a class="email" href="mailto:rlhagerty@hotmail.com"><i
-                                class="fas fa-envelope"></i><span>Email</span></a></div>
-                    <div class="navLink"><a href="https://www.linkedin.com/in/hagertyrebecca/"><img
-                                class="linkedin responsive" src="/static/images/linkedin.png"><span>Linkedin</span></a>
-                    </div>
-                    <div class="navLink"><a href="https://github.com/rhagerty/"><img class="fas github responsive"
-                                src="/static/images/github.png"><span>Github</span></a></div>
+        <div class="row" id="navbar-row">
+            <div class="col-12 navBar">
+                <div class="navLink"><a class="resume" href="/display-resume"><i
+                            class="fas fa-file"></i><span>Resume</span></a>
                 </div>
-            </div>
-            {% block content%}
-            <div class="row">
-                <div class="col-sm-12 col-md-8 header">
-                    <h1 class="superShadow">Rebecca Hagerty</h1>
+                <div class="navLink"><a href="/display-portfolio"><i
+                            class="fas fa-folder"></i><span>Portfolio</span></a></div>
+                <div class="navLink"><a class="about" href="/display-about"><i
+                            class="fas fa-info"></i><span>About</span></a>
                 </div>
+                <div class="navLink"><a class="email" href="mailto:rlhagerty@hotmail.com"><i
+                            class="fas fa-envelope"></i><span>Email</span></a></div>
+                <div class="navLink"><a href="https://www.linkedin.com/in/hagertyrebecca/"><img
+                            class="linkedin responsive" src="/static/images/linkedin.png"><span>Linkedin</span></a>
+                </div>
+                <div class="navLink"><a href="https://github.com/rhagerty/"><img class="fas github responsive"
+                            src="/static/images/github.png"><span>Github</span></a></div>
             </div>
-            <div class="row second">
-                <div class="col-sm-10 col-md-4 main-content definition">
-                    <p class="text"> reh&#183BEH&#183kuh hag&#183UR&#183tee</p>
-                    <small class="noun"><i>noun</i></small>
-                    <ol class="def-list">
-                        <li>computer nerd</li>
-                        <li>web development specialist</li>
+        </div>
+        {% block content%}
+        <div class="row">
+            <div class="col-sm-12 col-md-8 header">
+                <h1 class="superShadow">Rebecca Hagerty</h1>
+            </div>
+        </div>
+        <div class="row second">
+            <div class="col-sm-10 col-md-4 main-content definition">
+                <p class="text"> reh&#183BEH&#183kuh hag&#183UR&#183tee</p>
+                <small class="noun"><i>noun</i></small>
+                <ol class="def-list">
+                    <li>computer nerd</li>
+                    <li>web development specialist</li>
+                </ol>
+            </div>
+
+            <div class="col-sm-10 col-md-4 col-md-pull-1 main-content skills">
+                <h3 class="skills-title">Skills:</h4>
+                    <ol class="list-group">
+                        <li>JS, CSS, HTML, Flask, Python, SQL, Git, Express, NodeJS,
+                            PostgreSQL,
+                            React</li>
+                        <li>Making objects in my hand disappear into another dimension
+                        </li>
                     </ol>
-                </div>
-
-                <div class="col-sm-10 col-md-4 col-md-pull-1 main-content skills">
-                    <h3 class="skills-title">Skills:</h4>
-                        <ol class="list-group">
-                            <li>JS, CSS, HTML, Flask, Python, SQL, Git, Express, NodeJS,
-                                PostgreSQL,
-                                React</li>
-                            <li>Making objects in my hand disappear into another dimension
-                            </li>
-                        </ol>
-                </div>
             </div>
-
-            <div class="col-md-8 next">
+        </div>
+        <div class="row">
+            <div class="col-md-12 next">
                 <a href="/display-portfolio"><button class='nextBtn'>My projects so far <i
                             class="far fa-hand-point-up"></i></button></a>
             </div>
 
-
-            {% endblock %}
-
-
         </div>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.js"
-            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <script src="/static/ui.js"></script>
+        {% endblock %}
+
+
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="/static/ui.js"></script>
 </body>
 
 </html>

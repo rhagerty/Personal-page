@@ -24,7 +24,6 @@
   right: 0;
 }
 
-
 .fas.github {
   height: 3.5rem;
   filter: invert(0.7);
@@ -33,13 +32,18 @@
 .linkedin {
   height: 3.5rem;
   filter: grayscale(100%);
-  filter: brightness(0) invert(1) opacity(0.5);
+  filter: brightness(0) invert(0.8) opacity(0.5);
 }
 
 span {
   display: block;
   margin-top: 1.5rem;
   font-size: 1.5rem;
+}
+@media only screen and (max-width: 700px) {
+  span {
+    margin-top: 2rem;
+  }
 }
 
 .navLink {
@@ -120,7 +124,7 @@ body {
   font-family: "Roboto Mono", monospace;
   font-size: 12px;
   font-weight: lighter;
-  
+
   text-align: center;
 }
 
@@ -140,7 +144,8 @@ body {
 }
 @media only screen and (max-width: 700px) {
   .definition {
-    margin: 0 auto;
+    margin: 2rem auto;
+    width: 75%;
   }
 }
 
@@ -164,10 +169,10 @@ body {
   line-height: 1.6;
   font-size: 15px;
 }
-.next{
+.next {
   height: 300px;
- 
 }
+
 .nextBtn {
   background-color: black;
   box-shadow: 20px 38px 34px -6px hsla(0, 1%, 70%, 0.2);
@@ -175,28 +180,34 @@ body {
   border: solid 2px #41403e;
   width: min-content;
   position: absolute;
-padding: 2rem 4rem;
+  padding: 2rem 4rem;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
-  margin: -7% 0 0 15%;
-  
+  margin: -5% 0 0 5%;
 }
-.boggle:hover{
+
+@media only screen and (max-width: 700px) {
+  .nextBtn {
+    margin: 0 auto;
+  }
+}
+
+.boggle:hover {
   box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
 }
 
-.jeopardy:hover{
+.jeopardy:hover {
   box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
 }
 
-.connect:hover{
+.connect:hover {
   box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
 }
-.nextBtn:hover{
+.nextBtn:hover {
   box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
 }
 
-.upBtn:hover{
+.upBtn:hover {
   box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
 }
 
@@ -226,13 +237,14 @@ padding: 2rem 4rem;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   border: solid 2px #41403e;
   padding: 2rem;
+  background-color: black;
 }
 
-.capstone{
+.capstone {
   margin: 0 1rem 0 2%;
 }
 
-.warbler{
+.warbler {
   background: black;
   margin: -6% 0 0 10%;
 }
@@ -264,7 +276,7 @@ padding: 2rem 4rem;
   height: 4em;
 }
 
-.github-img{
+.github-img {
   filter: invert(1);
 }
 
@@ -274,42 +286,45 @@ padding: 2rem 4rem;
   color: white;
 }
 
-.two{
+.two {
   display: block;
 }
 
-.boggle, .connect, .jeopardy{
+.boggle,
+.connect,
+.jeopardy {
   font-size: 14px;
   border: solid 2px #41403e;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   box-shadow: 20px 38px 34px -6px hsla(0, 1%, 70%, 0.2);
   text-align: center;
+  background-color: black;
 }
 
-.jeopardy{
+.jeopardy {
   width: max-content;
   padding: 1rem 3em 0 3rem;
   margin: 2% 0 0 3%;
 }
-.connect{
+.connect {
   margin: 2% 0 0 0;
   width: min-content;
   padding: 0 5rem 0 5rem;
 }
 
-.boggle{
+.boggle {
   width: min-content;
   padding: 2rem 1rem;
   margin: 5% 0 0 5px;
 }
 
-a:hover{
+a:hover {
   cursor: pointer;
   box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
   text-decoration: none;
 }
 
-.games-text-box{
+.games-text-box {
   text-align: center;
   color: white;
 }
@@ -336,9 +351,9 @@ a:hover{
 .resume-container {
   margin: 15px auto;
 }
-.about-container{
+.about-container {
   margin: 15px auto;
-  background-color:rgba(116, 116, 116, 0.7);
+  background-color: rgba(116, 116, 116, 0.7);
   border-radius: 10px;
   padding: 1rem;
   color: #afaeae;
@@ -349,18 +364,18 @@ a:hover{
   font-size: 1.5rem;
 }
 
-.video-container{
+.video-container {
   background-color: black;
   text-align: center;
   float: left;
   max-width: 320px;
 }
-.training-img{
+.training-img {
   float: right;
   background-color: black;
   max-width: 250px;
 }
 
-.training{
+.training {
   height: 200px;
-} 
+}
