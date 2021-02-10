@@ -186,6 +186,20 @@ body {
   margin: -5% 0 0 5%;
 }
 
+.backBtn {
+  background-color: black;
+  font-family: "Architects Daughter", cursive;
+  box-shadow: 20px 38px 34px -6px hsla(0, 1%, 70%, 0.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 2px #41403e;
+  width: min-content;
+  position: absolute;
+  padding: 2rem 4rem;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+}
+
 @media only screen and (max-width: 700px) {
   .nextBtn {
     margin: 0 auto;
