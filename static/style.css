@@ -318,6 +318,15 @@ body {
   margin: 5% 0 0 5px;
 }
 
+@media only screen and (max-width: 700px) {
+.boggle,
+.connect,
+.jeopardy {
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+
 a:hover {
   cursor: pointer;
   box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
